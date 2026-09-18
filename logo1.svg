@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <!-- Wind & Accent Gradients -->
+    <linearGradient id="windGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.1"/>
+      <stop offset="50%" stop-color="#3b82f6" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#60a5fa" stop-opacity="0.2"/>
+    </linearGradient>
+
+    <linearGradient id="windGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe" stop-opacity="0.1"/>
+      <stop offset="60%" stop-color="#00c6ff" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0.15"/>
+    </linearGradient>
+
+    <linearGradient id="carBodyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2a3342"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+
+    <linearGradient id="wheelGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#60a5fa"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Wind Streamlines (Top & Surrounding) -->
+  <g fill="none" stroke-linecap="round">
+    <path d="M 100 80 Q 220 50 380 120" stroke="url(#windGrad1)" stroke-width="3.5" />
+    <path d="M 40 110 Q 180 60 430 160" stroke="url(#windGrad2)" stroke-width="4" />
+    <path d="M 30 260 C 120 220 220 120 420 220" stroke="url(#windGrad2)" stroke-width="5" />
+    <path d="M 270 170 Q 360 190 460 210" stroke="url(#windGrad1)" stroke-dasharray="8 6" stroke-width="3" />
+    <path d="M 20 300 Q 80 280 140 285" stroke="url(#windGrad1)" stroke-width="5" />
+    <path d="M 420 270 Q 455 260 480 220" stroke="url(#windGrad2)" stroke-width="4" />
+  </g>
+
+  <!-- Car Silhouette -->
+  <g>
+    <!-- Main Car Body Shell -->
+    <path d="M 80 320 
+             C 100 290, 130 275, 175 260 
+             C 210 200, 280 160, 390 230 
+             C 430 255, 450 280, 450 305 
+             C 450 325, 420 325, 390 325 
+             C 380 295, 335 295, 325 325 
+             L 180 325 
+             C 170 295, 125 295, 115 325 
+             Z" 
+          fill="url(#carBodyGrad)" 
+          stroke="#ffffff" 
+          stroke-width="3" 
+          stroke-linejoin="round" />
+
+    <!-- Sleek Window Frame -->
+    <path d="M 180 255 
+             C 220 205, 285 180, 385 240 
+             C 340 248, 250 250, 180 255 Z" 
+          fill="#cbd5e1" 
+          stroke="#ffffff" 
+          stroke-width="2" />
+
+    <!-- Front Wheel -->
+    <g transform="translate(147, 320)">
+      <circle r="22" fill="#1e293b" stroke="#ffffff" stroke-width="3" />
+      <circle r="14" fill="url(#wheelGrad)" />
+      <circle r="6" fill="#ffffff" />
+    </g>
+
+    <!-- Rear Wheel -->
+    <g transform="translate(357, 320)">
+      <circle r="22" fill="#1e293b" stroke="#ffffff" stroke-width="3" />
+      <circle r="14" fill="url(#wheelGrad)" />
+      <circle r="6" fill="#ffffff" />
+    </g>
+
+    <!-- Aerodynamic Side Streak -->
+    <path d="M 140 295 Q 260 285 435 280" stroke="url(#windGrad2)" stroke-width="3" fill="none" />
+  </g>
+
+  <!-- Ground Speed Line -->
+  <path d="M 30 350 L 170 350 M 200 350 L 300 350 M 330 350 L 460 350" stroke="#38bdf8" stroke-width="3" stroke-linecap="round" />
+</svg>
